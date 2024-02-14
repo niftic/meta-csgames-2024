@@ -1,0 +1,66 @@
+{
+    "organization": "Chlorophyllai",
+    "plant_name": "IoT Gateway",
+    "gateway_id": "CSGames2024",
+    "sensors": {
+        "temperature_sensor": {
+            "id": "TEMP_SENSOR_1",
+            "location": "Greenhouse A",
+            "thresholds": {
+            "min": 15,
+            "max": 35
+            }
+        },
+        "humidity_sensor": {
+            "id": "HUMID_SENSOR_1",
+            "location": "Greenhouse A",
+            "thresholds": {
+            "min": 30,
+            "max": 70
+            }
+        },
+        "light_sensor": {
+            "id": "LIGHT_SENSOR_1",
+            "location": "Greenhouse A",
+            "thresholds": {
+            "min": 100,
+            "max": 800
+            }
+        },
+        "soil_moisture_sensor": {
+            "id": "SOIL_MOISTURE_SENSOR_1",
+            "location": "Greenhouse A",
+            "thresholds": {
+            "min": 200,
+            "max": 800
+            }
+        }
+    },
+    "actuators": {
+        "water_pump": {
+            "id": "WATER_PUMP_1",
+            "location": "Greenhouse A",
+            "status": "off"
+        },
+        "ventilation_system": {
+            "id": "VENTILATION_SYSTEM_1",
+            "location": "Greenhouse A",
+            "status": "off"
+        },
+        "heating_system": {
+            "id": "HEATING_SYSTEM_1",
+            "location": "Greenhouse A",
+            "status": "off"
+        },
+        "cooling_system": {
+            "id": "COOLING_SYSTEM_1",
+            "location": "Greenhouse A",
+            "status": "off"
+        }
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "/var/log/plant_monitoring.log"
+    }
+}
+  

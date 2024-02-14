@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple DNS server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=@BINDIR@/simpleDNS
+Restart=always
+User=dns
+Group=dns
+
+[Install]
+WantedBy=multi-user.target

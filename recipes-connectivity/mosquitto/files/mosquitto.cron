@@ -1,0 +1,1 @@
+* * * * * root cd /root/scripts/mosquitto/ && /usr/bin/python3 publish.py

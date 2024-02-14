@@ -1,0 +1,11 @@
+[Unit]
+Description=Configuration Backup Service
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/config-backup
+ExecStart=/usr/bin/python3 /opt/config-backup/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

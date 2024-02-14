@@ -1,0 +1,13 @@
+[Unit]
+Description=Filebrowser daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=@BINDIR@/filebrowser -d @SYSCONFDIR@/filebrowser/filebrowser.db -r @LOCALSTATEDIR@/filebrowser
+Restart=always
+User=filebrowser
+Group=filebrowser
+
+[Install]
+WantedBy=multi-user.target

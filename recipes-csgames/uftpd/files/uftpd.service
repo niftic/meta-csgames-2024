@@ -1,0 +1,12 @@
+[Unit]
+Description=uFTP daemon
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/run/uftpd.pid
+ExecStart=@BINDIR@/uFTP
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
