@@ -6,6 +6,8 @@ After=network.target
 WorkingDirectory=/opt/config-backup
 ExecStart=/usr/bin/python3 /opt/config-backup/app.py
 Restart=always
+User=config-backup
+Group=config-backup
 
 [Install]
 WantedBy=multi-user.target

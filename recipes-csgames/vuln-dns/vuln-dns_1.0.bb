@@ -20,6 +20,7 @@ inherit systemd useradd
 
 USERADD_PACKAGES = "${PN}"
 USERADD_PARAM:${PN} = "--no-create-home \
+                       --home ${localstatedir}/local/dns \
                        --shell /sbin/nologin \
                        --system \
                        -g dns dns"
