@@ -1,0 +1,13 @@
+[Unit]
+Description=Status server listener
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/status-server
+ExecStart=java -jar server.jar 4200
+Restart=always
+User=status-server
+Group=status-server
+
+[Install]
+WantedBy=multi-user.target

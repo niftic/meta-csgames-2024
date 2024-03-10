@@ -43,7 +43,7 @@ local_conf_header:
   unreadable-tmp: |
     IMAGE_INSTALL:append = " unreadable-tmp"
   challenges: |
-    IMAGE_INSTALL:append = " extraction-flag keystore-admin uftpd filebrowser config-backup vuln-dns"
+    IMAGE_INSTALL:append = " extraction-flag keystore-admin uftpd filebrowser config-backup vuln-dns status-server"
   mqtt: |
     IMAGE_INSTALL:append = " mosquitto python3 python3-paho-mqtt cronie userland"
   web-interface: |
@@ -82,3 +82,8 @@ repos:
     url: https://github.com/ChristophHandschuh/meta-tailscale
     path: layers/meta-tailscale
     branch: main
+
+  meta-java:
+    url: git://git.yoctoproject.org/meta-java
+    path: layers/meta-java
+    branch: kirkstone
