@@ -35,6 +35,9 @@ local_conf_header:
     INIT_MANAGER = "systemd"
     VIRTUAL-RUNTIME_init_manager = "systemd"
     VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+  sharing: |
+    DISTRO_FEATURES:append = " ipv6"
+    IMAGE_INSTALL:append = " iptables tailscale openvpn"
   debug-root-key: |
     IMAGE_INSTALL:append = " debug-root-key"
   unreadable-tmp: |
