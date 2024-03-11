@@ -2,7 +2,8 @@ SUMMARY = "Status server and client"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
-SRC_URI = "file://target/ \
+SRC_URI = "file://client.jar;unpack=0 \
+           file://server.jar;unpack=0 \
            file://status-server.service \
            file://flag.txt"
 
@@ -24,8 +25,8 @@ GROUPADD_PARAM:${PN} = "--system status-server"
 do_install() {
     # Install jars
     install -d ${D}/opt/status-server
-    install -m 0440 -o root -g status-server ${WORKDIR}/target/client.jar ${D}/opt/status-server/
-    install -m 0440 -o root -g status-server ${WORKDIR}/target/server.jar ${D}/opt/status-server/
+    install -m 0440 -o root -g status-server ${WORKDIR}/client.jar ${D}/opt/status-server/
+    install -m 0440 -o root -g status-server ${WORKDIR}/server.jar ${D}/opt/status-server/
 
     # Install systemd service
     install -d ${D}${systemd_system_unitdir}
