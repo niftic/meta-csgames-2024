@@ -8,6 +8,7 @@ from cryptography.hazmat.primitives.serialization import load_pem_public_key
 from cryptography.exceptions import InvalidSignature
 import json
 import socket
+from io import BytesIO
 
 v1_blueprint = Blueprint('v1', __name__, url_prefix='/v1')
 
@@ -56,11 +57,9 @@ def backup():
             config_data['FLAG'] = flag.read().rstrip('\n')
 
         key = generate_encryption_key()
-        encrypted_data = encrypt_data(json.dumps(config_data, indent=2), key)
-        with open('backup.json', 'wb') as backup_file:
-            backup_file.write(encrypted_data)
+        encrypted_file = BytesIO(encrypt_data(json.dumps(config_data, indent=2), key))
 
-        return send_file('backup.json', as_attachment=True)
+        return send_file(encrypted_file, mimetype="application/json", as_attachment=True, download_name="config.json")
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
