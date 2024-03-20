@@ -21,3 +21,10 @@ kas build kas_csgames_iot_with_flags.yml
 kas build kas_csgames_iot_for_players.yml
 ~~~
 The resulting `.rpi-sdimg` images will be located in `build/tmp/deploy/images/raspberrypi3`.
+
+## Troubleshooting
+Depending on your internet speed, you might get a fetch error for the Raspberry Pi Linux kernel repository.
+~~~
+Bitbake Fetcher Error: FetchError('Unable to fetch URL from any source.', 'git://github.com/raspberrypi/linux.git;name=machine;branch=rpi-5.15.y;protocol=https')
+~~~
+This is just a timeout caused by the considerable size of the repository. You can simply restart the build a few times until the download succeeds.
