@@ -81,7 +81,7 @@ repos:
   meta-tailscale:
     url: https://github.com/ChristophHandschuh/meta-tailscale
     path: layers/meta-tailscale
-    branch: main
+    branch: master
 
   meta-java:
     url: git://git.yoctoproject.org/meta-java
