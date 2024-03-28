@@ -3,7 +3,7 @@ HOMEPAGE = "https://filebrowser.org/"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE;md5=6f7f172b8cd1d9eecd0462bffef34c41"
 
-SRC_URI = "https://github.com/filebrowser/filebrowser/releases/download/v${PV}/linux-armv7-filebrowser.tar.gz;name=filebrowser \
+SRC_URI = "https://github.com/filebrowser/filebrowser/releases/download/v${PV}/linux-arm64-filebrowser.tar.gz;name=filebrowser \
            file://filebrowser.service \
            file://filebrowser.db \
            file://flag.txt \
@@ -11,7 +11,7 @@ SRC_URI = "https://github.com/filebrowser/filebrowser/releases/download/v${PV}/l
            file://manifesto/ \
            file://logo.svg"
 
-SRC_URI[filebrowser.sha256sum] = "718317c70e6f2d9e09ababb7be24b9f73c744c1c0878cc656fc69c19384ebee7"
+SRC_URI[filebrowser.sha256sum] = "fd8de3bcc35307a0b662a86fdb51b2a511eff18f3b912e96b89aec3ad8827866"
 
 CSGAMES_FLAGS ?= "false"
 
