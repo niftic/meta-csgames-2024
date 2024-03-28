@@ -3,7 +3,9 @@ header:
   includes:
     - kas_csgames_iot_base.yml
 
+machine: raspberrypi3-64
+
 local_conf_header:
   extra: |
     CSGAMES_FLAGS = "true"
-    IMAGE_NAME = "${IMAGE_BASENAME}-with_flags"
+    IMAGE_NAME = "${IMAGE_BASENAME}-with_flags_rpi3"

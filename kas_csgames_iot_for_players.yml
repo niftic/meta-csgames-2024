@@ -3,6 +3,8 @@ header:
   includes:
     - kas_csgames_iot_base.yml
 
+machine: raspberrypi3-64
+
 local_conf_header:
   extra: |
     CSGAMES_FLAGS = "false"
